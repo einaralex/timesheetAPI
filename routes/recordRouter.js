@@ -18,13 +18,9 @@ router.route('/record/:id')
   .get(records.get_record_by_id)
   .put(records.update_record_by_id);
 
-router.route('/record/remove/:id')
+router.route('/record/:id/remove')
   .post(records.remove_record_by_id);
 
-
-//breyta routes í /record/:id/remove
-//                /record/add
-//                /record/:id
 //get record by story number
 //get record by date
 

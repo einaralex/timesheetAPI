@@ -32,7 +32,7 @@ describe('Records', () => {
                 timeTo: "22:00"
             }
             chai.request(server)
-                .post(prefix + '/newrecord')
+                .post(prefix + '/record/add')
                 .send(record)
                 .end((err, res) => {
                     res.should.have.status(200);
@@ -48,11 +48,11 @@ describe('Records', () => {
         it('it should POST a new record', (done) => {
             let record = {
                 desc: "I'm a test record",
-                timeFrom: "00:00",
-                timeTo: "00:01"
+                timeFrom: "00:02",
+                timeTo: "00:02"
             }
             chai.request(server)
-                .post(prefix + '/newrecord')
+                .post(prefix + '/record/add')
                 .send(record)
                 .end((err, res) => {
                     res.should.have.status(200);
@@ -88,6 +88,7 @@ describe('Records', () => {
             })
         })
     })
+
 
     // this is not asserting anything really
     describe('/GET record', () => {

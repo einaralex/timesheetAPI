@@ -6,6 +6,7 @@ let currentDate = moment().format('YYYY-M-D');
 let currentTime = moment().format('HH:mm');
 let currentTimeEnd = moment().add(1, 'hours').format('HH:mm');
 
+var timeValidation = [/^(\d{2}:\d{2})$/, 'Not a valid time format 00:00'];
 
 let RecordSchema = new mongoose.Schema({
     desc: {
@@ -18,10 +19,12 @@ let RecordSchema = new mongoose.Schema({
     },
     timeFrom: {
         type: String,
+        match: timeValidation,
         default: currentTime
     },
     timeTo: {
         type: String,
+        match: timeValidation,
         default: currentTimeEnd
     },
     story: String,

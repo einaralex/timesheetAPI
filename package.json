@@ -24,6 +24,7 @@
     "chai-http": "^3.0.0",
     "config": "^1.28.1",
     "mocha": "^4.0.1",
+    "mongoose": "^4.13.7",
     "morgan": "^1.9.0",
     "nodemon": "^1.12.1"
   },

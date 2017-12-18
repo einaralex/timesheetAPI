@@ -1,10 +1,10 @@
-GET /records
+GET     /records
 
-POST /record/add
+POST    /record/add
 
-GET /record/:id
+GET     /record/:id
 
-PUT /record/:id
+PUT     /record/:id
 
-POST /record/remove/:id
+POST    /record/:id/remove
 
